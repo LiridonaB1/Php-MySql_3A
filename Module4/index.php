@@ -53,6 +53,8 @@ function shuma($x,$y){
 
 
 shuma(12,40);
+echo "<br>";
+shuma(5,6);
 
 
 function maximum($a,$b) {
@@ -98,6 +100,67 @@ function callCounter(){
 
 callCounter(); //count=1
 callCounter();
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+//Arrays
+
+
+// $sports = array("Football","Voleyball","Tennis", "Handball"); // menyra e pare
+
+$sports = ["Football","Voleyball","Tennis", "Handball","Basketball","Kayak"];
+
+echo $sports[0];
+echo "hello";
+
+echo "<br>";
+echo end($sports);
+echo "<br>";
+echo count($sports);
+echo "<br>";
+echo "<br>";
+
+
+
+array_push($sports, "Skiing"); //add an element at the end of array
+array_unshift($sports, "Golf"); // add an element at the beggining
+
+
+
+echo "<br>";
+echo count($sports);
+echo "<br>";
+for($i=0;$i < 8 ;$i++) {
+    echo $sports[$i] . " ";
+   
+  
+}
+
+
+array_shift($sports); // - removes the first item
+array_pop($sports);  //- removes the last item
+
+echo "<br>";
+echo "<br>";
+for($i=0;$i < 6 ;$i++) {
+    echo $sports[$i] . " ";
+   
+  
+}
+
+echo "<br>";
+var_dump($sports);
+
+$output1 = array_slice($sports,2);
+$output2 = array_slice($sports,0,3);
+echo "<br>";
+var_dump($output1);
+echo "<br>";
+var_dump($output2);
+
+
+
 
 
 ?>
